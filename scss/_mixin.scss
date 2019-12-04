@@ -1,0 +1,12 @@
+// Media Query
+@mixin mobile-768 {
+    @media (min-width: #{768px}) {
+        @content;
+    }
+}
+
+@mixin mobile-575 {
+    @media (min-width: #{575px}) {
+        @content;
+    }
+}

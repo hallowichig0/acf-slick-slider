@@ -1,0 +1,113 @@
+.aa-slick-slider {
+    visibility: hidden;
+    .slick-arrow, .slick-dots {
+        display: none !important;
+    }
+    &.arrow-on {
+        .slick-arrow {
+            display: block !important;
+            font-size: 0;
+            position: absolute;
+            z-index: 99;
+            transform: translateY(-50%);
+            top: 50%; 
+            border: 0; 
+            background-color: transparent;
+            &:focus {
+                outline: none; 
+            }
+            &::before { 
+                font: {
+                    size: 40px; 
+                }
+                content: '';
+                display: block;  
+                color: #fff; 
+            } 
+            &.slick-prev {
+                left: 0;
+                padding: 0;
+                &::before {
+                    content: "";
+                    background: url(images/arrow-prev.png) center center no-repeat;background-size:15px 26px;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            &.slick-next {
+                right: 0;
+                padding: 0;
+                &::before { 
+                    content: "";
+                    background: url(images/arrow-next.png) center center no-repeat;background-size:15px 26px;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+    &.dots-on {
+        .slick-dots {
+            display: flex !important;
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            right: 0;
+            padding: 0;
+            list-style: none;
+            align-items: center;
+            justify-content: center;
+            margin: 0 -15px;  
+            li {
+                &.slick-active, &:hover {
+                    button {
+                        background: #fff;
+                    }
+                }
+                button {
+                    border: 1px solid #fff;
+                    border-radius: 100%;
+                    font-size: 0;
+                    width: 10px;
+                    height: 10px;   
+                    background: transparent;
+                    transition: opacity .2s ease;
+                    margin: 5px 7px;
+                }
+            }
+            span {
+                width: 10px;
+                height: 10px;
+                margin: 5px 7px;
+                background: transparent;
+                border: 1px solid #fff;
+                display: block;
+                transition: opacity .2s ease;
+                border-radius: 30px;
+            }
+        }
+    }
+    .aa-slick-slider-item {
+        position: relative;
+        .aa-slick-slider-image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .aa-slick-slider-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            .aa-slick-slider-caption-text {
+                text-align: center;
+                margin-top: 16px;
+                margin-bottom: 30px;
+                word-break: break-word;
+                word-wrap: break-word;
+            }
+        }
+    }
+}
