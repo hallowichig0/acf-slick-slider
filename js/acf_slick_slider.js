@@ -1,5 +1,4 @@
 (function( $ ){
-    /* Slick Carousel Banner */
     function slick_slider() {
         $('.aa-slick-slider').slick({
             dots: true,
