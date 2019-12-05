@@ -1,6 +1,6 @@
 <?php
 
-if(class_exists('ACF')){
+if(class_exists('ACF') && class_exists('acf_field_flexible_content')){
     function acf_slick_slider_shortcode($atts){
         ob_start();
         $args = shortcode_atts(array(
