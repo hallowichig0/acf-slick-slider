@@ -39,10 +39,10 @@ acf_add_local_field_group(array(
             )
         ));
 
-                //Tab1 Gallery
+                //Tab1 Slider
                 acf_add_local_field(array(
                     'key'           => 'optionAASlick_slider_tab1_key',
-                    'label'         => 'Gallery',
+                    'label'         => 'Slider',
                     'name'          => 'optionAASlick_slider_tab1',
                     'type'          => 'tab',
                     'parent'        => 'optionAASlick_slider_main_flexible_field_key', //flexible field key
