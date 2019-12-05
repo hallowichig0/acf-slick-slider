@@ -1,4 +1,4 @@
-=== ACF Ajax Grid Gallery ===
+=== ACF Slick Slider ===
 Contributors: hallowichig0
 Tags: acf, advanced, custom, flexible content, photo, slider
 Requires at least: 3.8
