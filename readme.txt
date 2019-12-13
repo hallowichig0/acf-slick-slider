@@ -17,7 +17,8 @@ A lightweight extension of Advanced Custom Field (ACF) that adds **slider** fiel
 * Add multiple flexible slider.
 * Add multiple photos for each slider fields.
 * Assign your fields to multiple edit pages (via shortcodes)
-* Option to enable arrows and dots.
+* Option to enable arrows, dots and autoplay.
+* Option to adjust autoplay speed and animation speed.
 * Option to limit the characters of image caption.
 
 = Note =
@@ -50,3 +51,8 @@ Just like any other WordPress plugin, this plugin can also cause issues with oth
 == Changelog ==
 = 1.0.0 =
 * Initial Release.
+
+= 1.1.0 =
+* [Features] Option to enable autoplay
+* [Features] Option to adjust autoplay speed
+* [Features] Option to adjust animation speed

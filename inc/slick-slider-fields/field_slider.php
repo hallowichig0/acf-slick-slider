@@ -126,6 +126,44 @@ acf_add_local_field_group(array(
                     'parent_layout' => 'optionAASlick_slider_main_flexible_layout1_key', // layout key
                 ));
 
+                // Autoplay
+                acf_add_local_field(array(
+                    'key'           => 'optionAASlick_slider_subfield_autoplay_tab2_key',
+                    'label'         => 'Enable Autoplay',
+                    'name'          => 'optionAASlick_slider_subfield_autoplay_tab2',
+                    'type'          => 'true_false',
+                    'default_value' => '1',
+                    'parent'        => 'optionAASlick_slider_main_flexible_field_key', //flexible field key
+                    'parent_layout' => 'optionAASlick_slider_main_flexible_layout1_key', // layout key
+                ));
+
+                // Autoplay Speed
+                acf_add_local_field(array(
+                    'key'           => 'optionAASlick_slider_subfield_autoplayspeed_tab2_key',
+                    'label'         => 'Autoplay Speed',
+                    'instructions'  => 'Adjust the speed of slideshow autoplay',
+                    'name'          => 'optionAASlick_slider_subfield_autoplayspeed_tab2',
+                    'type'          => 'number',
+                    'min'           => '1',
+                    'required'      => '1',
+                    'default_value' => '5000',
+                    'parent'        => 'optionAASlick_slider_main_flexible_field_key', //flexible field key
+                    'parent_layout' => 'optionAASlick_slider_main_flexible_layout1_key', // layout key
+                ));
+
+                // Speed
+                acf_add_local_field(array(
+                    'key'           => 'optionAASlick_slider_subfield_speed_tab2_key',
+                    'label'         => 'Speed',
+                    'instructions'  => 'Adjust the fade animation speed',
+                    'name'          => 'optionAASlick_slider_subfield_speed_tab2',
+                    'type'          => 'number',
+                    'min'           => '1',
+                    'required'      => '1',
+                    'default_value' => '1000',
+                    'parent'        => 'optionAASlick_slider_main_flexible_field_key', //flexible field key
+                    'parent_layout' => 'optionAASlick_slider_main_flexible_layout1_key', // layout key
+                ));
 
                 // Add Class
                 acf_add_local_field(array(

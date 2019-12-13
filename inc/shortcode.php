@@ -9,6 +9,7 @@ if(class_exists('ACF') && class_exists('acf_field_flexible_content')){
 
         $id = $args['id'];
         $count = 0;
+        
 
         if(!empty($id)){
             // Check value exists.
@@ -31,8 +32,15 @@ if(class_exists('ACF') && class_exists('acf_field_flexible_content')){
                             $slick_slider_dots = get_sub_field('optionAASlick_slider_subfield_dots_tab2', 'option');
                             // Limit Caption
                             $slick_slider_limitCaption = get_sub_field('optionAASlick_slider_subfield_limitcaption_tab2', 'option');
+                            // Autoplay
+                            $slick_slider_autoplay = get_sub_field('optionAASlick_slider_subfield_autoplay_tab2', 'option');
+                            // Autoplay Speed
+                            $slick_slider_autoplayspeed = get_sub_field('optionAASlick_slider_subfield_autoplayspeed_tab2', 'option');
+                            // Speed
+                            $slick_slider_speed = get_sub_field('optionAASlick_slider_subfield_speed_tab2', 'option');
+                            
                             ?>
-                            <div class="aa-slick-slider <?php
+                            <div data-autoplay="<?php echo $slick_slider_autoplay; ?>" data-autospeed="<?php echo $slick_slider_autoplayspeed; ?>" data-speed="<?php echo $slick_slider_speed; ?>" class="aa-slick-slider <?php
                             // auto-increment class
                             echo 'aa-slick-slider-count-'.$count;
 
@@ -71,6 +79,7 @@ if(class_exists('ACF') && class_exists('acf_field_flexible_content')){
                                                         }else{
                                                             echo $slick_image['caption'];
                                                         }
+                                                        
                                                         ?>
                                                     </p>
                                                 </div>
@@ -88,6 +97,7 @@ if(class_exists('ACF') && class_exists('acf_field_flexible_content')){
                 }
             }
         }
+
         return ob_get_clean();
     }
     add_shortcode('acf_slick_slider', 'acf_slick_slider_shortcode');
