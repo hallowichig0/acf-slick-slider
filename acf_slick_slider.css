@@ -77,9 +77,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      right: 0;
-      color: #fff;
-      background-color: rgba(0, 0, 0, 0.7); }
+      right: 0; }
       .aa-slick-slider .aa-slick-slider-item .aa-slick-slider-caption .aa-slick-slider-caption-text {
         text-align: center;
         margin-top: 16px;

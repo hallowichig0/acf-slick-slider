@@ -164,6 +164,84 @@ acf_add_local_field_group(array(
                     'parent'        => 'optionAASlick_slider_main_flexible_field_key', //flexible field key
                     'parent_layout' => 'optionAASlick_slider_main_flexible_layout1_key', // layout key
                 ));
+                
+                // Enable Caption
+                acf_add_local_field(array(
+                    'key'           => 'optionAASlick_slider_subfield_enable_caption_tab2_key',
+                    'label'         => 'Enable Image Caption',
+                    'instructions'  => 'Text color of image caption',
+                    'name'          => 'optionAASlick_slider_subfield_enable_caption_tab2',
+                    'type'          => 'true_false',
+                    'default_value' => '1',
+                    'parent'        => 'optionAASlick_slider_main_flexible_field_key', //flexible field key
+                    'parent_layout' => 'optionAASlick_slider_main_flexible_layout1_key', // layout key
+                ));
+
+                // Caption Background Color
+                acf_add_local_field(array(
+                    'key'           => 'optionAASlick_slider_subfield_caption_bgColor_tab2_key',
+                    'label'         => 'Caption Background Color',
+                    'instructions'  => 'Background color of image caption',
+                    'name'          => 'optionAASlick_slider_subfield_caption_bgColor_tab2',
+                    'type'          => 'color_picker',
+                    'default_value' => '#000000',
+                    'parent'        => 'optionAASlick_slider_main_flexible_field_key', //flexible field key
+                    'parent_layout' => 'optionAASlick_slider_main_flexible_layout1_key', // layout key
+                    'conditional_logic' => array(
+                        array(
+                            array(
+                                'field'     => 'optionAASlick_slider_subfield_enable_caption_tab2_key',
+                                'operator'  => '==',
+                                'value'     => '1',
+                            ),
+                        ),
+                    ),
+                ));
+
+                // Caption Background Color Range
+                acf_add_local_field(array(
+                    'key'           => 'optionAASlick_slider_subfield_caption_bgColor_range_tab2_key',
+                    'label'         => 'Caption Background Color Range (Transparent)',
+                    'instructions'  => 'Increase/decrease the thickness of background color',
+                    'name'          => 'optionAASlick_slider_subfield_caption_bgColor_range_tab2',
+                    'type'          => 'range',
+                    'max'           => '1',
+                    'min'           => '0',
+                    'step'          => '0.1',
+                    'default_value' => '0.7',
+                    'parent'        => 'optionAASlick_slider_main_flexible_field_key', //flexible field key
+                    'parent_layout' => 'optionAASlick_slider_main_flexible_layout1_key', // layout key
+                    'conditional_logic' => array(
+                        array(
+                            array(
+                                'field'     => 'optionAASlick_slider_subfield_enable_caption_tab2_key',
+                                'operator'  => '==',
+                                'value'     => '1',
+                            ),
+                        ),
+                    ),
+                ));
+                
+                // Caption Text Color
+                acf_add_local_field(array(
+                    'key'           => 'optionAASlick_slider_subfield_caption_txtColor_tab2_key',
+                    'label'         => 'Caption Text Color',
+                    'instructions'  => 'Text color of image caption',
+                    'name'          => 'optionAASlick_slider_subfield_caption_txtColor_tab2',
+                    'type'          => 'color_picker',
+                    'default_value' => '#ffffff',
+                    'parent'        => 'optionAASlick_slider_main_flexible_field_key', //flexible field key
+                    'parent_layout' => 'optionAASlick_slider_main_flexible_layout1_key', // layout key
+                    'conditional_logic' => array(
+                        array(
+                            array(
+                                'field'     => 'optionAASlick_slider_subfield_enable_caption_tab2_key',
+                                'operator'  => '==',
+                                'value'     => '1',
+                            ),
+                        ),
+                    ),
+                ));
 
                 // Add Class
                 acf_add_local_field(array(
