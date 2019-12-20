@@ -38,6 +38,8 @@ if(class_exists('ACF') && class_exists('acf_field_flexible_content')){
                             $slick_slider_autoplayspeed = get_sub_field('optionAASlick_slider_subfield_autoplayspeed_tab2', 'option');
                             // Speed
                             $slick_slider_speed = get_sub_field('optionAASlick_slider_subfield_speed_tab2', 'option');
+                            // Enable Adaptive Height
+                            $slick_slider_adaptiveHeight = get_sub_field('optionAASlick_slider_subfield_adaptiveheight_tab2', 'option');
                             // Enable Caption
                             $slick_slider_caption = get_sub_field('optionAASlick_slider_subfield_enable_caption_tab2', 'option');
                             // Caption Background Color
@@ -51,7 +53,7 @@ if(class_exists('ACF') && class_exists('acf_field_flexible_content')){
                             $hexTorgba = acf_slick_slider_hex2rgba($slick_slider_caption_bgColor, $slick_slider_caption_bgColorRange);
                             
                             ?>
-                            <div data-autoplay="<?php echo $slick_slider_autoplay; ?>" data-autospeed="<?php echo $slick_slider_autoplayspeed; ?>" data-speed="<?php echo $slick_slider_speed; ?>" class="aa-slick-slider <?php
+                            <div data-autoplay="<?php echo $slick_slider_autoplay; ?>" data-autospeed="<?php echo $slick_slider_autoplayspeed; ?>" data-speed="<?php echo $slick_slider_speed; ?>" data-adaptiveheight="<?php echo $slick_slider_adaptiveHeight; ?>" class="aa-slick-slider <?php
                             // auto-increment class
                             echo 'aa-slick-slider-count-'.$count;
 

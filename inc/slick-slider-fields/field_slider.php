@@ -164,6 +164,18 @@ acf_add_local_field_group(array(
                     'parent'        => 'optionAASlick_slider_main_flexible_field_key', //flexible field key
                     'parent_layout' => 'optionAASlick_slider_main_flexible_layout1_key', // layout key
                 ));
+
+                // Enable Adaptive Height
+                acf_add_local_field(array(
+                    'key'           => 'optionAASlick_slider_subfield_adaptiveheight_tab2_key',
+                    'label'         => 'Enable Adaptive Height',
+                    'instructions'  => 'Enables adaptive height for single slide horizontal carousels',
+                    'name'          => 'optionAASlick_slider_subfield_adaptiveheight_tab2',
+                    'type'          => 'true_false',
+                    'default_value' => '1',
+                    'parent'        => 'optionAASlick_slider_main_flexible_field_key', //flexible field key
+                    'parent_layout' => 'optionAASlick_slider_main_flexible_layout1_key', // layout key
+                ));
                 
                 // Enable Caption
                 acf_add_local_field(array(
