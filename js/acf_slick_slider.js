@@ -1,5 +1,32 @@
 (function( $ ){
-    function slick_slider() {
+    function aa_slick_slider_lightbox(settings) {
+        var lightBox = $('.aa-slick-slider-lightbox');
+        var slick_slider = $('.aa-slick-slider');
+        var defaults = {
+            slick_autoPlay: true,
+        };
+        var options = $.extend(defaults,settings);
+        var slickAutoPlay = options['slick_autoPlay'];
+        
+        if(slickAutoPlay == true){
+            slickAutoPlay = 'slickPause';
+        }else{
+            slickAutoPlay = 'slickPlay';
+        }
+
+        var venoOptions = {
+            // is called before the venobox pops up, return false to prevent opening;
+            cb_pre_open : function(obj){
+                slick_slider.slick(slickAutoPlay);
+            },
+            // is called before closing, return false to prevent closing
+            cb_pre_close : function(obj, gallIndex, thenext, theprev){
+                slick_slider.slick('slickPlay');
+            },
+        }
+        lightBox.venobox(venoOptions);
+    }
+    function aa_slick_slider() {
         $('.aa-slick-slider').each(function(){
             var tis = $(this);
             var autoplay_switch = tis.attr('data-autoplay');
@@ -33,10 +60,13 @@
                 pauseOnHover:false,
                 fade: true,
             });
+            tis.css('visibility', 'visible');
         });
     }
     $(document).ready(function(){
-        slick_slider();
-        $('.aa-slick-slider').css('visibility', 'visible');
+        aa_slick_slider();
+        aa_slick_slider_lightbox({
+            slick_autoPlay: true, // enable/disable slider autoplay when lightbox was opened. Default: true
+        });
     });
 })( jQuery );

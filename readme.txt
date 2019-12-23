@@ -2,8 +2,8 @@
 Contributors: hallowichig0
 Tags: acf, advanced, custom, flexible content, photo, slider
 Requires at least: 3.8
-Tested up to: 5.2.1
-Stable tag: 1.2.0
+Tested up to: 5.3
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,3 +60,7 @@ Just like any other WordPress plugin, this plugin can also cause issues with oth
 = 1.2.0 =
 * [Features] Option to enable/disable image caption
 * [Features] Option to change background/text color of the image caption
+
+= 1.3.0 =
+* [Features] Option to enable lightbox
+* Clean Code

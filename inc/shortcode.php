@@ -48,6 +48,10 @@ if(class_exists('ACF') && class_exists('acf_field_flexible_content')){
                             $slick_slider_caption_bgColorRange = get_sub_field('optionAASlick_slider_subfield_caption_bgColor_range_tab2', 'option');
                             // Caption Text Color
                             $slick_slider_caption_txtColor = get_sub_field('optionAASlick_slider_subfield_caption_txtColor_tab2', 'option');
+                            // Enable Lightbox
+                            $slick_slider_lightbox = get_sub_field('optionAASlick_slider_subfield_enable_lightbox_tab2', 'option');
+                            // Lightbox Unique Name
+                            $slick_slider_lightbox_uniqueName = get_sub_field('optionAASlick_slider_subfield_lightbox_uniquename_tab2', 'option');
 
                             // RGBA Converter
                             $hexTorgba = acf_slick_slider_hex2rgba($slick_slider_caption_bgColor, $slick_slider_caption_bgColorRange);
@@ -82,8 +86,18 @@ if(class_exists('ACF') && class_exists('acf_field_flexible_content')){
                                             $slick_image = get_sub_field('optionAASlick_slider_layout1_subfield1', 'option');
                                             ?>
                                             <div class="aa-slick-slider-item aa-slick-slider-item-<?php echo $items; ?>">
-                                                <img class="aa-slick-slider-image" src="<?php echo $slick_image['url'] ?>" alt="<?php echo $slick_image['alt'] ?>"/>
                                                 <?php
+                                                if($slick_slider_lightbox){
+                                                ?>
+                                                <a class="aa-slick-slider-lightbox" data-gall="<?php echo $slick_slider_lightbox_uniqueName; ?>" href="<?php echo $slick_image['url']; ?>">
+                                                    <img class="aa-slick-slider-image" src="<?php echo $slick_image['url']; ?>" alt="<?php echo $slick_image['alt']; ?>"/>
+                                                </a>
+                                                <?php
+                                                }else{
+                                                ?>
+                                                <img class="aa-slick-slider-image" src="<?php echo $slick_image['url']; ?>" alt="<?php echo $slick_image['alt']; ?>"/>
+                                                <?php
+                                                }
                                                 if($slick_slider_caption){
                                                     if(!empty($slick_image['caption']) && isset($slick_image['caption'])){
                                                 ?>

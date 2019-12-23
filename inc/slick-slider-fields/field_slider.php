@@ -255,6 +255,39 @@ acf_add_local_field_group(array(
                     ),
                 ));
 
+                // Enable Lightbox
+                acf_add_local_field(array(
+                    'key'           => 'optionAASlick_slider_subfield_enable_lightbox_tab2_key',
+                    'label'         => 'Enable Lightbox',
+                    'instructions'  => 'Enable lightbox for each images',
+                    'name'          => 'optionAASlick_slider_subfield_enable_lightbox_tab2',
+                    'type'          => 'true_false',
+                    'default_value' => '0',
+                    'parent'        => 'optionAASlick_slider_main_flexible_field_key', //flexible field key
+                    'parent_layout' => 'optionAASlick_slider_main_flexible_layout1_key', // layout key
+                ));
+
+                // Lightbox Unique Name
+                acf_add_local_field(array(
+                    'key'           => 'optionAASlick_slider_subfield_lightbox_uniquename_tab2_key',
+                    'label'         => 'Add Unique Name',
+                    'instructions'  => 'Make sure the unique name that you will input is not the same in the other slick slider',
+                    'name'          => 'optionAASlick_slider_subfield_lightbox_uniquename_tab2',
+                    'type'          => 'text',
+                    'required'      => 1,
+                    'parent'        => 'optionAASlick_slider_main_flexible_field_key', //flexible field key
+                    'parent_layout' => 'optionAASlick_slider_main_flexible_layout1_key', // layout key
+                    'conditional_logic' => array(
+                        array(
+                            array(
+                                'field'     => 'optionAASlick_slider_subfield_enable_lightbox_tab2_key',
+                                'operator'  => '==',
+                                'value'     => '1',
+                            ),
+                        ),
+                    ),
+                ));
+
                 // Add Class
                 acf_add_local_field(array(
                     'key'           => 'optionAASlick_slider_subfield_class_tab2_key',
