@@ -288,6 +288,27 @@ acf_add_local_field_group(array(
                     ),
                 ));
 
+                // Lightbox Title
+                acf_add_local_field(array(
+                    'key'           => 'optionAASlick_slider_subfield_lightbox_title_tab2_key',
+                    'label'         => 'Lightbox Title',
+                    'instructions'  => 'Show the title for each images in lightbox',
+                    'name'          => 'optionAASlick_slider_subfield_lightbox_title_tab2',
+                    'type'          => 'true_false',
+                    'default_value' => '1',
+                    'parent'        => 'optionAASlick_slider_main_flexible_field_key', //flexible field key
+                    'parent_layout' => 'optionAASlick_slider_main_flexible_layout1_key', // layout key
+                    'conditional_logic' => array(
+                        array(
+                            array(
+                                'field'     => 'optionAASlick_slider_subfield_enable_lightbox_tab2_key',
+                                'operator'  => '==',
+                                'value'     => '1',
+                            ),
+                        ),
+                    ),
+                ));
+
                 // Add Class
                 acf_add_local_field(array(
                     'key'           => 'optionAASlick_slider_subfield_class_tab2_key',

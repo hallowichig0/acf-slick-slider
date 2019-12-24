@@ -15,6 +15,11 @@
         }
 
         var venoOptions = {
+            // Options
+            titleattr: 'data-title',
+            numeratio: true,
+
+            // Callback
             // is called before the venobox pops up, return false to prevent opening;
             cb_pre_open : function(obj){
                 slick_slider.slick(slickAutoPlay);

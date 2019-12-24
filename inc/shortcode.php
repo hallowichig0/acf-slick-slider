@@ -52,6 +52,8 @@ if(class_exists('ACF') && class_exists('acf_field_flexible_content')){
                             $slick_slider_lightbox = get_sub_field('optionAASlick_slider_subfield_enable_lightbox_tab2', 'option');
                             // Lightbox Unique Name
                             $slick_slider_lightbox_uniqueName = get_sub_field('optionAASlick_slider_subfield_lightbox_uniquename_tab2', 'option');
+                            // Lightbox Title
+                            $slick_slider_lightbox_title = get_sub_field('optionAASlick_slider_subfield_lightbox_title_tab2', 'option');
 
                             // RGBA Converter
                             $hexTorgba = acf_slick_slider_hex2rgba($slick_slider_caption_bgColor, $slick_slider_caption_bgColorRange);
@@ -89,7 +91,7 @@ if(class_exists('ACF') && class_exists('acf_field_flexible_content')){
                                                 <?php
                                                 if($slick_slider_lightbox){
                                                 ?>
-                                                <a class="aa-slick-slider-lightbox" data-gall="<?php echo $slick_slider_lightbox_uniqueName; ?>" href="<?php echo $slick_image['url']; ?>">
+                                                <a class="aa-slick-slider-lightbox" <?php echo ($slick_slider_lightbox_title) ? 'data-title='.$slick_image['title'] : ''; ?> data-gall="<?php echo $slick_slider_lightbox_uniqueName; ?>" href="<?php echo $slick_image['url']; ?>">
                                                     <img class="aa-slick-slider-image" src="<?php echo $slick_image['url']; ?>" alt="<?php echo $slick_image['alt']; ?>"/>
                                                 </a>
                                                 <?php
