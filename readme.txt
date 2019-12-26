@@ -20,6 +20,7 @@ A lightweight extension of Advanced Custom Field (ACF) that adds **slider** fiel
 * Option to enable arrows, dots and autoplay.
 * Option to adjust autoplay speed and animation speed.
 * Option to limit the characters of image caption.
+* Option to enable lightbox for each images.
 
 = Note =
 This plugin is require of ACF Flexible Content Pro. This plugin doesn't require a coding knowledge. You will just need to copy, paste and edit the id of the shortcode.
