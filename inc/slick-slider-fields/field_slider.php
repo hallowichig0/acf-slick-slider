@@ -181,7 +181,6 @@ acf_add_local_field_group(array(
                 acf_add_local_field(array(
                     'key'           => 'optionAASlick_slider_subfield_enable_caption_tab2_key',
                     'label'         => 'Enable Image Caption',
-                    'instructions'  => 'Text color of image caption',
                     'name'          => 'optionAASlick_slider_subfield_enable_caption_tab2',
                     'type'          => 'true_false',
                     'default_value' => '1',
