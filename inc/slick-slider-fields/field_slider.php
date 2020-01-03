@@ -308,7 +308,7 @@ acf_add_local_field_group(array(
                     ),
                 ));
 
-                // Lightbox Title
+                // Lightbox Spinner
                 acf_add_local_field(array(
                     'key'           => 'optionAASlick_slider_subfield_lightbox_spinner_tab2_key',
                     'label'         => 'Spinner',
