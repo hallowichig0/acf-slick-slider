@@ -54,12 +54,16 @@ if(class_exists('ACF') && class_exists('acf_field_flexible_content')){
                             $slick_slider_lightbox_uniqueName = get_sub_field('optionAASlick_slider_subfield_lightbox_uniquename_tab2', 'option');
                             // Lightbox Title
                             $slick_slider_lightbox_title = get_sub_field('optionAASlick_slider_subfield_lightbox_title_tab2', 'option');
+                            // Lightbox Spinner
+                            $slick_slider_lightbox_spinner = get_sub_field_object('optionAASlick_slider_subfield_lightbox_spinner_tab2', 'option');
 
                             // RGBA Converter
                             $hexTorgba = acf_slick_slider_hex2rgba($slick_slider_caption_bgColor, $slick_slider_caption_bgColorRange);
                             
                             ?>
-                            <div data-autoplay="<?php echo $slick_slider_autoplay; ?>" data-autospeed="<?php echo $slick_slider_autoplayspeed; ?>" data-speed="<?php echo $slick_slider_speed; ?>" data-adaptiveheight="<?php echo $slick_slider_adaptiveHeight; ?>" class="aa-slick-slider <?php
+                            <div data-autoplay="<?php echo $slick_slider_autoplay; ?>" data-autospeed="<?php echo $slick_slider_autoplayspeed; ?>" 
+                            data-speed="<?php echo $slick_slider_speed; ?>" data-adaptiveheight="<?php echo $slick_slider_adaptiveHeight; ?>" 
+                            data-loadspinner="<?php echo esc_attr($slick_slider_lightbox_spinner['value']); ?>" class="aa-slick-slider <?php
                             // auto-increment class
                             echo 'aa-slick-slider-count-'.$count;
 
